@@ -22,12 +22,12 @@ pub fn main() anyerror!void {
             const f = try fs.cwd().openFile(arg, .{ .mode = .read_only });
             defer f.close();
             cat(writer, f) catch |err| {
-                std.log.warn("error reading file '{s}': {}\n", .{ arg, err });
+                std.log.warn("error reading file '{s}': {}", .{ arg, err });
             };
         }
     } else {
         cat(writer, std.io.getStdIn().reader()) catch |err| {
-            std.log.warn("error reading stdin: {}\n", .{err});
+            std.log.warn("error reading stdin: {}", .{err});
         };
     }
 }
