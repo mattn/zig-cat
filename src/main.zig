@@ -11,7 +11,7 @@ fn cat(w: anytype, r: anytype) !void {
 }
 
 pub fn main() anyerror!void {
-    var a = std.testing.allocator;
+    var a = std.heap.page_allocator;
 
     var args = try std.process.argsAlloc(a);
     defer a.free(args);
