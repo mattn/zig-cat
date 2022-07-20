@@ -1,4 +1,4 @@
-# cat-zig
+# zig-cat
 
 cat written in zig
 
