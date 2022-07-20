@@ -19,7 +19,7 @@ pub fn main() anyerror!void {
     const writer = std.io.getStdOut().writer();
     if (args.len > 1) {
         for (args[1..args.len]) |arg| {
-            const f = try fs.cwd().openFile(arg, fs.File.OpenFlags{ .mode = .read_only });
+            const f = try fs.cwd().openFile(arg, .{ .mode = .read_only });
             defer f.close();
             cat(writer, f) catch |err| {
                 std.log.warn("error reading file '{s}': {}\n", .{ arg, err });
