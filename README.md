@@ -8,6 +8,12 @@ cat written in zig
 $ zig build
 ```
 
+## Run
+
+```
+$ zig run
+```
+
 ## License
 
 MIT
