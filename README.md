@@ -2,6 +2,12 @@
 
 cat written in zig
 
+## Build
+
+```
+$ zig build
+```
+
 ## License
 
 MIT
